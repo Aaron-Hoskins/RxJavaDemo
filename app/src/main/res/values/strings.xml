@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">RxJavaDemo</string>
+    <string name="generate_new_joke">Generate New Joke</string>
+</resources>
