@@ -1,0 +1,57 @@
+- Architecture Structures
+    - Used to help in Maintainability, Reusable, and portability of code
+    - Achieved by defining separation of concerns
+        - 3 layers
+            - view (UI)
+                - activities
+                - fragments
+                - dialogs
+                - adapters
+                - custom views
+                - compound views
+            - model (data)
+                - pojos
+                - data classes
+                - data sources
+                    - local
+                        - Sqlite files
+                        - Room DAO, Database file
+                        - SharedPref Manager
+                        - Utility classes for file access
+                    - remote
+                        - API calls (REST)
+                        - Remote databases (Firebase DB)
+                        - Authenication
+                    - repository managers
+            - logic layer - operational  (biz logic)
+                - logic to pull data from datasources
+                - logic to manipulate data for viewing
+                - background operations
+                - ect
+    - 3 Major Arch. types
+        - MVC
+            - Model View Controller
+        - MVP
+            - Model View Presenter
+            - Communication from view to presenter and present to view is achieved via the CONTRACT
+                - interfaces
+            - The view and presenter have a 1 to 1 relationship
+            - Not actively supported by google
+            - Model
+                - datasources
+                - pojo/data classes
+            - View
+                - Activities
+                    - View for Activity
+                    - Presenter for Activity
+                    - Contract for the activity
+                - Fragments
+                    - ...
+                - Adapters
+                    - are controlled via the host presenter
+            - MVP (Dagger)
+                - Base presenters
+                - Dagger 2 Modeles, components, scopes, ect
+
+        - MVVM
+            - Model View ViewModel
