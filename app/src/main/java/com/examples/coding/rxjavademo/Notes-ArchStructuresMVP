@@ -55,3 +55,38 @@
 
         - MVVM
             - Model View ViewModel
+                - One to Many Relationship between the view and view model
+                - Databinding is used to communicate
+                    - Standard  (One-way Databinding)
+                        - ViewModel talks to view only
+                    - Two-Way Data binding
+                        - ViewModel talks to view and view triggers events in viewmodel
+                - SUPPORTED BT GOOGLE
+                    - Architectural Component Lib (Jetpack)
+                        - AndroidViewModels
+                            - contains application context
+                        - ViewModels
+                            - do not contain context
+                        - LiveData
+                            - Observable Lifecycle aware data container
+                       - Databinding
+
+                - 3 parts
+                    - Model
+                    - Views
+                    - ViewModels
+                - Changes to layouts
+                    <layout>  <!-- designates this is a databinded layout -->
+                        <data> <!-- USe this dataset to populate views -->
+                            <variable
+                                name= "viewmodel" <!-- name referred to within view to designate object to get value from -->
+                                type ="com.example.aaron.java.viewmodels.mainviewmodel" <!-- Location of the viewmodel object in the application -->
+                        </data>
+                        <LinearLayout ...>
+
+                        <TextView
+                            ...
+                            android.text = "@{viewmodel.firstName}"
+                            />
+                            </linearLayout>
+                    </layout>
